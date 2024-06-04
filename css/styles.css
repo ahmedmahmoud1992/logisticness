@@ -391,7 +391,7 @@ ul.Service_ul li:before {
   width: 100%;
   height: 100%;
   z-index: 9999;
-  background: url("./../../imgs/container.gif") 50% 50% no-repeat rgb(255, 255, 255);
+  background: url("../imgs/container.gif") 50% 50% no-repeat rgb(255, 255, 255);
   background-size: 10%;
   transition: all 5000ms;
 }
@@ -406,11 +406,16 @@ ul.Service_ul li:before {
   text-align: center;
   padding:  0px;
   transition: transform 0.3s ease-in-out;
+  display: grid;
+  grid-template-rows: auto auto;
 }
 
 .services-grid .card.service:hover {
-  transform: translateY(-15px);
+  /* transform: translateY(-15px); */
   filter: drop-shadow(0 0 1px var(--primary-color));
+}
+.services-grid .card.service:hover img {
+  transform: scale(1.1);
 }
 
 .services-grid .card-body {
@@ -419,6 +424,26 @@ ul.Service_ul li:before {
   text-align: start;
 
 }
+.card-img, .card-img-bottom, .card-img-top {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.card-img-container {
+  overflow: hidden;
+  height: 240px; /* Adjust this value as needed */
+}
+
+.card-img-container img {
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.card-img-container:hover img {
+  transform: translateY(-10px) skew(5%); /* Adjust the amount of scroll effect */
+}
+
 
 .services-grid .card-body .btn {
   width: fit-content;
@@ -488,4 +513,27 @@ ul.Service_ul li:before {
     justify-content: center;
     align-items: center;
 }
+}
+
+.item1{
+  background-image: url('../imgs/slider/1.png');
+}
+
+.item2{
+  background-image: url('../imgs/slider/2.png');
+}
+.item3{
+  background-image: url('../imgs/slider/3.png');
+}
+
+.item4{
+  background-image: url('../imgs/slider/4.png');
+}
+
+.item5{
+  background-image: url('../imgs/slider/5.png');
+}
+
+.item6{
+  background-image: url('../imgs/slider/6.png');
 }
